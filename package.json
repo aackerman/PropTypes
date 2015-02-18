@@ -1,0 +1,25 @@
+{
+  "name": "propTypes",
+  "version": "0.0.1",
+  "description": "PropType validation extracted from React",
+  "main": "dist/index.js",
+  "scripts": {
+    "js": "babel --modules common index.js --out-dir dist",
+    "test": "karma start karma.conf.js"
+  },
+  "author": "Aaron Ackerman <theron17@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "babel-core": "^4.0.1",
+    "babel-loader": "^4.0.0",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.30",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "^0.3.3",
+    "karma-phantomjs2-launcher": "^0.1.4",
+    "karma-webpack": "^1.3.1",
+    "webpack": "^1.4.15",
+    "webpack-dev-server": "^1.7.0"
+  }
+}
