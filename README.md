@@ -11,7 +11,7 @@ Currently measures in a 1.6k minified and gzipped.
 Pass a prop types schema, props, and a descriptive name.
 
 ```js
-var PropTypes = require('propTypes');
+import PropTypes from 'PropTypes';
 
 var schema = {
   ham: PropTypes.string.isRequired
@@ -22,7 +22,7 @@ PropTypes.validate(schema, {ham: 'delicious'}, 'Ham');
 
 ### API: `PropTypes`
 
-```
+```js
 {
   // You can declare that a prop is a specific JS primitive. By default, these
   // are all optional.
