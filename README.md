@@ -1,6 +1,8 @@
 ## PropTypes
 
-Extracted from React.PropTypes
+Extracted from [`React.PropTypes`](http://facebook.github.io/react/docs/reusable-components.html#prop-validation). To use without a dependency on `React`.
+
+Currently measures in a 1.6k minified and gzipped.
 
 ### API: `validate`
 
@@ -10,6 +12,7 @@ Pass a prop types schema, props, and a descriptive name.
 
 ```js
 var PropTypes = require('propTypes');
+
 var schema = {
   ham: PropTypes.string.isRequired
 };
