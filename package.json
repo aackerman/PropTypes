@@ -1,6 +1,6 @@
 {
-  "name": "propTypes",
-  "version": "0.0.1",
+  "name": "PropTypes",
+  "version": "0.1.0",
   "description": "PropType validation extracted from React",
   "main": "dist/index.js",
   "scripts": {
