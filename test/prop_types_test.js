@@ -40,7 +40,7 @@ function typeCheckPass(declaration, value) {
 
 describe('PropTypes', function() {
   beforeEach(function() {
-    PropTypes = require('../');
+    PropTypes = require('../index');
   });
 
   describe('Primitive Types', function() {
@@ -561,5 +561,61 @@ describe('PropTypes', function() {
         requiredMessage
       );
     });
+  });
+
+  describe('Custom validator', function() {
+    beforeEach(function() {
+      spyOn(console, 'warn');
+    });
+
+    it('should have been called with the right params', function() {
+      var spy = jasmine.createSpy();
+
+      var schema = {num: spy};
+      PropTypes.validate(schema, {num: 5}, 'Component');
+
+      expect(spy.calls.argsFor(0).length).toBe(4); // temp double validation
+      expect(spy.calls.argsFor(0)[1]).toBe('num');
+      expect(spy.calls.argsFor(0)[2]).toBe('Component');
+    });
+
+    it('should have been called even if the prop is not present', function() {
+      var spy = jasmine.createSpy();
+      var schema = {num: spy};
+      PropTypes.validate(schema, {bla: 5}, 'Component');
+      expect(spy.calls.argsFor(0).length).toBe(4); // temp double validation
+    });
+
+    it('should have received the validator\'s return value', function() {
+      var spy = jasmine.createSpy().and.callFake(
+        function(props, propName, descriptiveName) {
+          if (props[propName] !== 5) {
+            return new Error('num must be 5!');
+          }
+        }
+      );
+
+      var schema = {num: spy};
+      PropTypes.validate(schema, {num: 6}, 'Component');
+
+      expect(console.warn.calls.argsFor(0).length).toBe(1);
+      expect(console.warn.calls.argsFor(0)[0]).toBe(
+      'Warning: Failed propType: num must be 5!');
+    });
+
+    it('should not warn if the validator returned anything else than an error',
+      function() {
+        var spy = jasmine.createSpy().and.callFake(
+          function(props, propName, descriptiveName) {
+            return 'This message will never reach anyone';
+          }
+        );
+
+        var schema = {num: spy};
+        PropTypes.validate(schema, {num: 5}, 'Component');
+
+        expect(console.warn.calls.argsFor(0).length).toBe(0);
+      }
+    );
   });
 });
