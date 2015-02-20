@@ -1,15 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: "./index",
+  entry: "./src/index",
   output: {
-    path: __dirname + '/dist',
-    filename: "index.js"
+    path: __dirname + '/lib',
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
   },
   module: {
     loaders: [
       { test: /\.js/, loader: 'babel-loader' }
     ]
-  },
-  plugins: [new webpack.optimize.UglifyJsPlugin()]
+  }
 }

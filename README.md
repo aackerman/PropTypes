@@ -4,7 +4,7 @@ Extracted from [`React.PropTypes`](http://facebook.github.io/react/docs/reusable
 
 Currently measures in a 1.6k minified and gzipped.
 
-### API: `validate`
+### API: `PropTypes.validate`
 
 #### Example
 

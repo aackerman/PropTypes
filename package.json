@@ -2,10 +2,10 @@
   "name": "PropTypes",
   "version": "0.1.0",
   "description": "PropType validation extracted from React",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "js": "babel --modules common index.js --out-dir dist",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "prepublish": "webpack"
   },
   "author": "Aaron Ackerman <theron17@gmail.com>",
   "license": "BSD",
