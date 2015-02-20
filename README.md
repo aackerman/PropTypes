@@ -78,6 +78,6 @@ PropTypes.validate(schema, {ham: 'delicious'}, 'Ham');
 }
 ```
 
-### Disclaimer
+### Caveat
 
-This is not an **exact** drop-in, `React.PropTypes` specific validations related to React have been stripped out. `PropTypes.element` and `PropTypes.node` are not included.
+This is not an **exact** drop-in, validations related to React have been stripped out. `PropTypes.element` and `PropTypes.node` are not included.
