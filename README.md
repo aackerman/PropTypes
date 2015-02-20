@@ -15,7 +15,7 @@ npm install --save prop-types
 Pass a PropType schema, a props object, and a descriptive name for warnings. In React the descriptive name would be the `displayName` of a component.
 
 ```js
-import PropTypes from 'PropTypes';
+import PropTypes from 'prop-types';
 
 var schema = {
   ham: PropTypes.string.isRequired
