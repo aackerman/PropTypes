@@ -2,7 +2,11 @@
 
 Extracted from [`React.PropTypes`](http://facebook.github.io/react/docs/reusable-components.html#prop-validation). To use without a dependency on `React`.
 
-Currently measures in a 1.6k minified and gzipped.
+### Install
+
+```
+npm install --save prop-types
+```
 
 ### API: `PropTypes.validate`
 
