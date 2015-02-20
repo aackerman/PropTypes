@@ -8,7 +8,7 @@ Currently measures in a 1.6k minified and gzipped.
 
 #### Example
 
-Pass a prop types schema, props, and a descriptive name.
+Pass a PropType schema, a props object, and a descriptive name for warnings. In React the descriptive name would be the `displayName` of a component.
 
 ```js
 import PropTypes from 'PropTypes';
