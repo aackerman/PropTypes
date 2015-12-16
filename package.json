@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/aackerman/PropTypes/issues"
   },
-  "homepage": "https://github.com/aackerman/PropTypes"
+  "homepage": "https://github.com/aackerman/PropTypes",
+  "dependencies": {
+    "invariant": "^2.2.0"
+  }
 }
