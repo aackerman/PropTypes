@@ -1,5 +1,6 @@
-import PropTypes from './prop_types';
+import PropTypes from './PropTypes';
 import validate from './validate';
+import validateWithErrors from './validateWithErrors';
 
 var assign = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
@@ -13,4 +14,4 @@ var assign = Object.assign || function (target) {
   return target;
 };
 
-export default assign({}, PropTypes, { validate });
+export default assign({}, PropTypes, { validate, validateWithErrors });

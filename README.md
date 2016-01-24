@@ -24,6 +24,10 @@ var schema = {
 PropTypes.validate(schema, {ham: 'delicious'}, 'Ham');
 ```
 
+### API: `PropTypes.validateWithErrors`
+
+Similar to `PropTypes.validate` but will throw errors instead of logging warnings to the console.
+
 ### API: `PropTypes`
 
 ```js

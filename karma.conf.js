@@ -4,10 +4,10 @@ module.exports = function(config) {
 
     frameworks: ['jasmine'],
 
-    files: ['src/__tests__/*_test.js'],
+    files: ['src/__tests__/*-test.js'],
 
     preprocessors: {
-      'src/__tests__/*_test.js': ['webpack'],
+      'src/__tests__/*-test.js': ['webpack'],
     },
 
     reporters: ['progress'],

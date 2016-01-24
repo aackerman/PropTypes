@@ -617,5 +617,19 @@ describe('PropTypes', function() {
         expect(console.warn.calls.argsFor(0).length).toBe(0);
       }
     );
+
+    it('should throw when using validateWithErrors', function(){
+      var spy = jasmine.createSpy().and.callFake(
+        function(props, propName, descriptiveName) {
+          if (props[propName] !== 5) {
+            return new Error('num must be 5!');
+          }
+        }
+      );
+      var schema = {num: spy};
+      expect(() => {
+        PropTypes.validateWithErrors(schema, {num: 6}, 'Component');
+      }).toThrow();
+    });
   });
 });
