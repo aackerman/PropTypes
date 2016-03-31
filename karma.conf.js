@@ -20,9 +20,9 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    browsers: ['PhantomJS2'],
+    browsers: ['PhantomJS'],
 
-    singleRun: false,
+    singleRun: true,
 
     webpackMiddleware: {
       noInfo: true
